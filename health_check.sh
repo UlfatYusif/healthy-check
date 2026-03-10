@@ -6,6 +6,20 @@
 # developed  date : 21-Feb-2026              #
 ##############################################
 
+
+
+####-------- LOG CONFIG --------
+LOG_DIR="/Users/ulfat.tanriveridyev/MyGit/ShellScripts/CheckHealth/logs"
+DATE=$(date +"%m-%d-%Y")
+LOG_FILE="$LOG_DIR/$DATE.log"
+
+
+# həm ekrana, həm log file-a yaz
+exec > >(tee -a "$LOG_FILE") 2>&1
+
+
+
+
 echo "Timestamp : $(date)"
 echo ""
 
